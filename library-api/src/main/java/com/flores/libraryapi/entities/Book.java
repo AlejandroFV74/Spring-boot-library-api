@@ -6,13 +6,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="books")
 public class Book {
     @Id
-    private long id;
+    private String id;
     private String title;
     private String author;
     private double price;
     private String isbn;
 
-    public Book(long id, String title, String author, double price, String isbn) {
+    public Book(String id, String title, String author, double price, String isbn) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -20,7 +20,7 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
@@ -40,7 +40,7 @@ public class Book {
         return isbn;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
